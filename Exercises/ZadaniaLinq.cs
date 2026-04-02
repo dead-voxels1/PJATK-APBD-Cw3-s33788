@@ -160,7 +160,7 @@ public sealed class ZadaniaLinq
     {
         return (from z in DaneUczelni.Zapisy
             orderby z.DataZapisu descending
-            select $"{z.DataZapisu}, {z.StudentId}, ${z.PrzedmiotId}").Take(3);
+            select $"{z.DataZapisu}, {z.StudentId}, {z.PrzedmiotId}").Take(3);
     }
 
     /// <summary>
@@ -256,7 +256,7 @@ public sealed class ZadaniaLinq
             where z.OcenaKoncowa != null
             group z by p.Nazwa
             into grupa
-            select $"{grupa.Average(z => z.OcenaKoncowa)}");
+            select $"{grupa.Key} {grupa.Average(z => z.OcenaKoncowa)}");
     }
 
     /// <summary>
