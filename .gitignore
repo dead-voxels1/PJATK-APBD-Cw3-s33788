@@ -1,0 +1,6 @@
+obj/
+bin/
+.idea/
+*.sln.iml
+*.csproj.iml
+*.user
